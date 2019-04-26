@@ -1,5 +1,7 @@
 const mysql = require("mysql");
 
+const TABLE_ALL = "SELECT * FROM census_learn_sql";
+
 const connection = mysql.createConnection({
     host: "birdietest",
     port: "3306",
