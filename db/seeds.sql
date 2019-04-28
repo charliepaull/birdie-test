@@ -13,3 +13,4 @@ INSERT INTO census_learn_sql (Education, pop_count, avg_age) VALUES ("Homeschool
 INSERT INTO census_learn_sql (Education, pop_count, avg_age) VALUES ("Juris Doctor JD", "35035", 27.3);
 
 INSERT INTO census_learn_sql (Education, pop_count, avg_age) VALUES ("Doctorate Degree MD", "76378", 57.6);
+

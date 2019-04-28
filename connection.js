@@ -1,9 +1,7 @@
 const mysql = require("mysql");
 
-const TABLE_ALL = "SELECT * FROM census_learn_sql";
-
 const connection = mysql.createConnection({
-    host: "birdietest",
+    host: "localhost",
     port: "3306",
     user: "test-read",
     password: "xnxPp6QfZbCYkY8",
@@ -19,4 +17,4 @@ connection.connect((err) => {
     console.log("connected as id " + connection.threadId);
 })
 
-export default connection;
+module.exports = connection;
