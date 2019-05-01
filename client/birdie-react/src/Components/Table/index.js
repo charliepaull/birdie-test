@@ -1,4 +1,5 @@
 import React from "react";
+// import {table} from "semantic-ui-react";
 
 const Table = () => {
 return (
