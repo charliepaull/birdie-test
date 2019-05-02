@@ -43,6 +43,13 @@ class NavFilter extends Component {
     }))
   }
 
+  // selectItem(title, id, stateKey){
+  //   this.setState({
+  //     headerTitle: title,
+  //     listOpen: false
+  //   }, this.props.resetThenSet(id, stateKey))
+  // }
+
   render() {
 
     const{list} = this.props

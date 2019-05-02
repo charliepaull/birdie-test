@@ -10,7 +10,48 @@ let style = {
   } 
 }
 
-const Table = () => {
+// placeholder data if I cannot get the backend to connect with React.js
+const tableContent = {
+  data: [
+    {
+      id: 1,
+      education: "High School Grad",
+      pop_count: "48407",
+      avg_age: 45.3
+    }, 
+
+    {
+      id: 2,
+      education: "Juris Doctor",
+      pop_count: "35035",
+      avg_age: 27.3
+    }, 
+
+    {
+      id: 3,
+      education: "Bachelor's Degree",
+      pop_count: "629593",
+      avg_age: 56.3
+    }, 
+
+    {
+      id: 4,
+      education: "Medicinae Doctor",
+      pop_count: "54000",
+      avg_age: 56.3
+    },
+
+    {
+      id: 1,
+      education: "Children",
+      pop_count: "54000",
+      avg_age: 56.3
+    }
+
+  ]  
+}
+
+const Table = (props) => {
 return (
   <table class="ui celled table census-table" style={style.tableParams}>
     <thead>

@@ -35,6 +35,10 @@ class App extends Component {
         ]
     }
 
+    onclickHeaders = (event) => {
+        
+    }
+
     toggleSelected(id, key){
         let temp = this.state[key]
         temp[id].selected = !temp[id].selected
