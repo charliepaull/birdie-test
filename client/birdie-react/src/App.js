@@ -3,6 +3,12 @@ import NavFilter from "./Components/NavFilter";
 // import TableWrapper from "./Components/TableWrapper";
 import Table from "./Components/Table";
 
+let style = {
+    dropDown: {
+        width: "250px"
+    }
+}
+
 class App extends Component {
     state = {
         census: [
@@ -40,10 +46,11 @@ class App extends Component {
     render() {
         return (
             <div>
-                <NavFilter
-                    title="Census Category"
+                <NavFilter className="nav-filter"
+                    title="Census Category ⬇️"
                     list={this.state.census}
                     toggleItem={this.toggleSelected}
+                    style={style.dropDown}
                 />
                 <Table />
             </div>

@@ -7,14 +7,25 @@ let style = {
     background: "#73AD21",
     padding: "20px", 
     width: "100px",
-    height: "25px" 
+    height: "80px",
+    margin: "15px 25px 15px 25px",
+    color: "black",
+    fontWeight: "bold"
+  },
+
+  dropDown: {
+    display: "inline-block"
+  }, 
+
+  variable: {
+    margin: "25px 25px"
   }
 }
 
 class NavFilter extends Component {
   constructor(props) {
     super(props)
-    let state = {
+    this.state = {
       listOpen: false,
       headerTitle: this.props.title
     }
@@ -38,17 +49,10 @@ class NavFilter extends Component {
     const{listOpen, headerTitle} = this.state
   return (
       <div>
-        <h2>Variable</h2>
+        <h2 className="variable" style={style.variable}>Variable</h2>
         <div className="ui-verticalMenu" onClick={() => this.toggleList()} style={style.verticalMenu}>
-          <div className="dropdown-item">{headerTitle}</div>
-            Categories
-            <i className="dropdown-icon" />
-            {/* <div className="menu">
-              <a className="item">Electronics</a>
-              <a className="item">Automotive</a>
-              <a className="item">Home</a>
-            </div> */}
-          
+          <div className="dropdown-item" style={style.dropDown}>{headerTitle}</div>
+            <i className="dropdown-icon" />          
           {listOpen && <ul className="dd-list">
             {list.map((item) => (
               <li className="dd-list-item" key={item.title} onClick={() => this.toggleItem(item.id, item.key)}>
