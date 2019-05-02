@@ -10,56 +10,47 @@ let style = {
 }
 
 class App extends Component {
-    state = {
-        census: [
-          {
-              id: 0,
-              title: "Education",
-              selection: false,
-              key: "Census"
-          },
+  state = {
+    census: [
+      {
+        id: 0,
+        title: "Education",
+        selection: false,
+        key: "Census"
+      },
 
-          {
-              id: 1,
-              title: "pop_count",
-              selection: false,
-              key: "Census"
-          },
+      {
+        id: 1,
+        title: "pop_count",
+        selection: false,
+        key: "Census"
+      },
 
-          {
-              id: 2,
-              title: "avg_age",
-              selection: false,
-              key: "Census"
-          },
-        ]
-    }
+      {
+        id: 2,
+        title: "avg_age",
+        selection: false,
+        key: "Census"
+      }
+    ]
+  };
 
-    onclickHeaders = (event) => {
-        
-    }
-
-    toggleSelected(id, key){
-        let temp = this.state[key]
-        temp[id].selected = !temp[id].selected
-        this.setState({
-          [key]: temp
-        })
-      }    
-
-    render() {
-        return (
-            <div>
-                <NavFilter className="nav-filter"
-                    title="Census Category ⬇️"
-                    list={this.state.census}
-                    toggleItem={this.toggleSelected}
-                    style={style.dropDown}
-                />
-                <Table />
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <NavFilter
+          className="nav-filter"
+          title="Census Category ⬇️"
+          list={this.state.census}
+          toggleItem={this.toggleSelected}
+          style={style.dropDown}
+        />
+        <Table 
+          sortItems={this.sortBy} 
+        />
+      </div>
+    );
+  }
 }
 
 export default App;
