@@ -1,13 +1,13 @@
 const express = require("express");
 const connection = require("./connection");
 
-const app = express();
-
 // query
 const TABLE_ALL = "SELECT * FROM census_learn_sql";
 
 // backend PORT server
 const PORT = process.env.PORT || 8080;
+
+const app = express();
 
 // this is middleware - using express because I don't know Sagas or Epic
 app.use(express.urlencoded({ extended: true}));
