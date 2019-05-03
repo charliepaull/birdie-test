@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-// import {table} from "semantic-ui-react";
 
 let style = {
   tableParams: {
@@ -17,8 +16,7 @@ let style = {
   }
 }
 
-// placeholder data if I cannot get the backend to connect with React.js
-
+// placeholder data because I cannot get the backend to connect with React.js
 const Row = ({id, education, pop_count, avg_age}) => (
   <div className="row">
     <div>{id}</div>
@@ -123,50 +121,3 @@ class Table extends Component {
 
 export default Table;
 
-
-/*
-      <table class="ui celled table census-table" style={style.tableParams}>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Education</th>
-          <th>pop_count</th>
-          <th>avg_age</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-label="id">{tableContent.data[0].id}</td>
-          <td data-label="education">{tableContent.data[0].education}</td>
-          <td data-label="pop_count">{tableContent.data[0].pop_count}</td>
-          <td data-label="avg_age">{tableContent.data[0].avg_age}</td>
-        </tr>
-        <tr>
-          <td data-label="id">{tableContent.data[1].id}</td>
-          <td data-label="education">{tableContent.data[1].education}</td>
-          <td data-label="pop_count">{tableContent.data[1].pop_count}</td>
-          <td data-label="avg_age">{tableContent.data[1].avg_age}</td>
-        </tr>
-        <tr>
-          <td data-label="id">{tableContent.data[2].id}</td>
-          <td data-label="education">{tableContent.data[2].education}</td>
-          <td data-label="pop_count">{tableContent.data[2].pop_count}</td>
-          <td data-label="avg_age">{tableContent.data[2].avg_age}</td>
-        </tr>
-        <tr>
-          <td data-label="id">{tableContent.data[3].id}</td>
-          <td data-label="education">{tableContent.data[3].education}</td>
-          <td data-label="pop_count">{tableContent.data[3].pop_count}</td>
-          <td data-label="avg_age">{tableContent.data[3].avg_age}</td>
-        </tr>
-        <tr>
-          <td data-label="id">{tableContent.data[4].id}</td>
-          <td data-label="education">{tableContent.data[4].education}</td>
-          <td data-label="pop_count">{tableContent.data[4].pop_count}</td>
-          <td data-label="avg_age">{tableContent.data[4].avg_age}</td>
-        </tr>
-  
-      </tbody>
-    </table>
-
-*/
